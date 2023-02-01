@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -209,7 +209,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -217,6 +217,28 @@
         <article role="main">
           <section id="cldap-reflection-attack-with-amplification">
 <h1>CLDAP Reflection Attack with Amplification<a class="headerlink" href="#cldap-reflection-attack-with-amplification" title="Permalink to this heading">#</a></h1>
+<p>A Connection-less Lightweight Directory Access Protocol (CLDAP) Reflection Attack with Amplification occurs when an attacker sends a CLDAP request to an LDAP server, using a spoofed sender IP address. CLDAP is used to connect, search, and modify shared Internet directories. It runs over port 389/UDP.</p>
+<p>A CLDAP Reflection attack occurs when a cyber threat actor spoofs the victim’s IP address and sends a CLDAP query to multiple LDAP servers. The LDAP servers then send the requested data to the spoofed IP address. This unsolicited response is what results in a DDoS attack, as the victim’s machine can’t process an overabundance of LDAP/CLDAP data at the same time.</p>
+<p>The amplification is due to the number of times a packet is enlarged while processed by the LDAP server. LDAP UDP protocol responses are much larger than the initial request with an amplification factor of 52, and can peak at up to a factor of 70.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>TCP LDAP Reflection Attack with Amplification Variant</strong></p>
+<p>The LDAP Reflection Attack with Amplification variant can be used over port 389/TCP. This attack has an amplification factor of 46, and can peak at up to a factor of 55.</p>
+</div>
+<section id="recommendations">
+<h2>Recommendations<a class="headerlink" href="#recommendations" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>To identify a CLDAP Reflection Attack with Amplification, investigate your network logs and look for inbound traffic with a source port of 389/UDP.</p></li>
+<li><p>Once identified, try to leverage your upstream network service provider and provide them with the attacking IP addresses and the packet sizes used in the attack. Upstream providers have the ability to place a filter at their level.</p></li>
+<li><p>Create a DDoS protection plan.</p></li>
+<li><p>Along with remediating inbound attacks, take the following preventative measures to ensure that your servers are not used to attack others.</p>
+<ul>
+<li><p>Implement ingress firewall rules that restrict unauthorized use of the LDAP server.</p></li>
+<li><p>Auditing policies can be used to provide reporting of network services that are potentially exploitable as reflection attacks.</p></li>
+</ul>
+</li>
+</ul>
+</section>
 </section>
 
         </article>
@@ -262,8 +284,27 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">CLDAP Reflection Attack with Amplification</a><ul>
+<li><a class="reference internal" href="#recommendations">Recommendations</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
