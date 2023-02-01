@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -209,7 +209,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -217,6 +217,15 @@
         <article role="main">
           <section id="smbloris">
 <h1>SMBLoris<a class="headerlink" href="#smbloris" title="Permalink to this heading">#</a></h1>
+<p>A Server Message Block (SMB) SMBLoris attack is an application-level DDoS attack that occurs when a cyber threat actor opens multiple SMB connections to a device, maliciously consuming memory with minimal attack cost. SMB is a remote access protocol used for providing shared access to files, printers, and various communications between devices over port 445. All versions of SMB are vulnerable to SMBLoris, because the vulnerability lies in the way SMB packets are processed and the memory is allocated. Windows and Samba software devices are both susceptible to the attack.</p>
+<p>A connection made with a single IPv4 or IPv6 address impacts up to 8GB of memory if an actor sends the attack over both IPv4 and IPv6, which allows for one computer to cause 16GB of memory to be consumed while utilizing only 512 MB of its own memory. Eventually the targeted computer cannot allocate any more memory and forces the Windows computer to become unresponsive, which results in the computer needing to be manually rebooted. If this attack occurs against a Linux device with Samba, the device is forced into its configured Out of Memory (OOM) behavior.</p>
+<section id="recommendations">
+<h2>Recommendations<a class="headerlink" href="#recommendations" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>To block a remote SMBLoris attack from occurring, configure the border firewall to block all ingress traffic over ports 445 and 139.</p></li>
+<li><p>To block an internal SMBLoris attack from occurring, set an artificial rate limit for the number of connections local devices can have open.</p></li>
+</ul>
+</section>
 </section>
 
         </article>
@@ -262,8 +271,27 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">SMBLoris</a><ul>
+<li><a class="reference internal" href="#recommendations">Recommendations</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

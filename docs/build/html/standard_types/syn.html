@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -209,7 +209,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -217,6 +217,29 @@
         <article role="main">
           <section id="sny-flood">
 <h1>SNY Flood<a class="headerlink" href="#sny-flood" title="Permalink to this heading">#</a></h1>
+<p>A SYN Flood is one of the most common forms of DDoS attacks observed by the MS-ISAC. It occurs when an attacker sends a succession of TCP Synchronize (SYN) requests to the target in an attempt to consume enough resources to make the server unavailable for legitimate users. This works because a SYN request opens network communication between a prospective client and the target server. When the server receives a SYN request, it responds acknowledging the request and holds the communication open while it waits for the client to acknowledge the open connection. However, in a successful SYN Flood, the client acknowledgment never arrives, thus consuming the server’s resources until the connection times out. A large number of incoming SYN requests to the target server exhausts all available server resources and results in a successful DDoS attack.</p>
+<section id="recommendations">
+<h2>Recommendations<a class="headerlink" href="#recommendations" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>To identify a SYN Flood, investigate network logs and locate the TCP SYN flag. Tcpdump or Wireshark may work for this purpose.</p>
+<ul>
+<li><p>TCP SYN packets are normal and are not necessarily indicative of malicious activity. Instead look for a large number of SYN packets, from multiple sources, over a short duration.</p></li>
+</ul>
+</li>
+<li><p>If you identify an attack, try to leverage your upstream network service provider in order for them to mitigate the activity before it reaches your network.</p></li>
+<li><p>To help minimize the impact of successful SYN Flood attacks, define strict “TCP keepalive” and “maximum connection” rules on all perimeter devices, such as firewalls and proxy servers.</p></li>
+<li><p>On some firewall appliances, you can enable “SYN cookies” to help mitigate the effects of a SYN Flood. Enabling SYN cookies forces the firewall to validate the TCP connection between client and server before traffic is passed to the server. When attackers never send a final acknowledgment of the open connection, the firewall drops the connection.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Slowloris Attacks</strong></p>
+<p>While Slowloris is a DoS tool that can be easily accessed by threat actors, the term Slowloris is also used to describe a type of DoS attack. Slowloris attacks attempt to establish multiple TCP connections on a target web server, and hold them open for as long as possible by sending partial requests, very similar to a SYN Flood.</p>
+<p><strong>Variation of SYN Flood: ESSYN/XSYN Flood</strong></p>
+<p>An ESSYN Flood, also known as an XSYN Flood, is an attack designed to target entities using stateful firewalls. The attack works when a large number of unique source IP  addresses all attempt to open connections with the target destination IP. Each new connection from a unique source IP creates a new entry in the firewall state table. The purpose of this attack is to create more unique connections then there is space for in the firewall’s state table. Once the table is full, the firewall will not accept any additional inbound connections, denying service to legitimate users attempting to access the destination IP.</p>
+<p><strong>Variation of SYN Flood: PSH Flood</strong></p>
+<p>A Push (PSH) Flood involves sending a large number of TCP packets with the PSH bit enabled. The purpose of a PSH packet is to bypass packet buffering, which allows for the efficient transfer of data by ensuring packets are filled to the maximum segment size when multiple packets are sent over a TCP connection. If the PSH bit is enabled, it indicates the packet should immediately be sent to the application. In normal circumstances, this does not present an issue, however when a significant number of PSH packets are sent to a target server, there is a potential to overload its resources, creating a DoS situation.</p>
+</div>
+</section>
 </section>
 
         </article>
@@ -262,8 +285,27 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">SNY Flood</a><ul>
+<li><a class="reference internal" href="#recommendations">Recommendations</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
