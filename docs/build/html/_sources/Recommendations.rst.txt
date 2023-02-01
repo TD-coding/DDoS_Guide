@@ -1,0 +1,9 @@
+General Recommendations and Mitigation Strategies
+=================================================
+
+In 1492, Columbus sailed the ocean blue
+
+.. note::
+    But did he really? More at 11!
+
+**Perhaps it was the ocean that sailed him**
