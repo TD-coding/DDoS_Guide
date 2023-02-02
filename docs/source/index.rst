@@ -6,13 +6,14 @@
 Guide to DDoS Attacks 
 =====================================
 
+.. WARNING::
+   This is a testing page. This guide is under active development and should not be considered an authoritative source.
+
 This Multi-State Information Sharing and Analysis Center (MS-ISAC) document is a guide to aid
 partners in their remediation efforts of Distributed Denial of Service (DDoS) attacks. This guide
 is not inclusive of all DDoS attack types and references only the types of attacks partners of the
 MS-ISAC have reported experiencing.
 
-.. WARNING::
-   This guide is under active development.
 
 .. toctree::
    :maxdepth: 1
