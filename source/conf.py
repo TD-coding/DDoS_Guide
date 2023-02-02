@@ -59,7 +59,6 @@ extensions = [
     #'sphinx_markdown_tables',
     #'sphinx_last_updated_by_git',
     #'myst_parser',
-    'myst_parser'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
