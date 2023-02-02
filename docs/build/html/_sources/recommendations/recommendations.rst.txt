@@ -32,4 +32,4 @@ The following generic recommendations for DDoS mitigation, can reduce the impact
 
     The MS-ISAC is the focal point for cyber threat prevention, protection, response and recovery for the nation's state, local, tribal, and territorial (SLTT) governments. 
     The MS-ISAC 24x7 cyber security operations center provides real-time network monitoring, early cyber threat warnings and advisories, vulnerability identification and mitigation and incident response. 
-    For more information please visit http://msisac.cisecurity.org/
+    For more information please visit our `website <https://www.cisecurity.org/ms-isac>`
