@@ -6,7 +6,7 @@ The following generic recommendations for DDoS mitigation, can reduce the impact
 
 * Consider also establishing relationships with companies who offer DDoS mitigation services.
 
-* If you are experiencing a DDoS attack, provide the attacking IP addresses to your upstream network service provider so they can implement restrictions at their level. Keep in mind that Reflection DDoS attacks typically originate from legitimate public servers. It is important to ascertain to whom an IP belongs to when examining network logs during an attack. Use tools such as the American Registry for Internet Numbers (ARIN) (https://www.arin.net) to look up the source IPs involved in the attack. Otherwise, you may block traffic from legitimate networks or servers.
+* If you are experiencing a DDoS attack, provide the attacking IP addresses to your upstream network service provider so they can implement restrictions at their level. Keep in mind that Reflection DDoS attacks typically originate from legitimate public servers. It is important to ascertain to whom an IP belongs to when examining network logs during an attack. Use tools such as the `American Registry for Internet Numbers (ARIN) <https://www.arin.net>`_ to look up the source IPs involved in the attack. Otherwise, you may block traffic from legitimate networks or servers.
 
 * Enable firewall logging of accepted and denied traffic to determine where the DDoS may be originating.
 
@@ -32,4 +32,4 @@ The following generic recommendations for DDoS mitigation, can reduce the impact
 
     The MS-ISAC is the focal point for cyber threat prevention, protection, response and recovery for the nation's state, local, tribal, and territorial (SLTT) governments. 
     The MS-ISAC 24x7 cyber security operations center provides real-time network monitoring, early cyber threat warnings and advisories, vulnerability identification and mitigation and incident response. 
-    For more information please visit our `website <https://www.cisecurity.org/ms-isac>`
+    For more information please visit our `website <https://www.cisecurity.org/ms-isac>`_

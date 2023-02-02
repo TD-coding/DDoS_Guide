@@ -13,6 +13,6 @@ Recommendations
 
 * Along with remediating inbound attacks, take the following preventative measures to ensure that your UPnP devices are not used to attack others.
 
-  * If you are unsure if any devices on your network could be employed in an attack, follow the instructions available at OpenSSDP to check: hxxp://openssdpproject.org/
+  * If you are unsure if any devices on your network could be employed in an attack, follow the instructions available at `OpenSSDP <http://openssdpproject.org/>`_ to check.
 
   * It is also recommended to block outbound port 1900/UDP traffic at your border routers, and restrict UPnP to the internal network if required.

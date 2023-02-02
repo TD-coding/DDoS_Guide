@@ -59,6 +59,7 @@ extensions = [
     #'sphinx_markdown_tables',
     #'sphinx_last_updated_by_git',
     #'myst_parser',
+    'myst_parser'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -93,3 +94,8 @@ html_css_files = [
 #
 html_logo = '_static/msisac.png'
 
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.txt': 'restructuredtext',
+    '.md': 'markdown',
+}

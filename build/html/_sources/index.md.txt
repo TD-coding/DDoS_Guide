@@ -3,8 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Guide to DDoS Attacks
-===================== 
+# Guide to DDoS Attacks 
 
 .. WARNING::
    This is a testing page. This guide is under active development and should not be considered an authoritative source.

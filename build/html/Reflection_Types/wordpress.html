@@ -224,9 +224,9 @@
 <ul class="simple">
 <li><p>To identify a WordPress Pingback Reflection attack with Amplification, investigate your network logs and look for a large number of inbound TCP traffic over port 80 from a large number of sources. The traffic appears as HTTP GET requests for random values such as “?5454545=6767676”. This request bypasses the cache and forces a full-page reload for every packet.</p></li>
 <li><p>If you identify an attack, try to leverage your upstream network service provider in order for them to mitigate the activity before it reaches your network.</p></li>
-<li><p>At the time of this writing, there is no way to prevent this inbound traffic as on its own it is normal web traffic. However, there is a way to ensure that your WordPress websites are not used to attack others. To do this, WordPress offers a tool that is available for download that disables the pingback feature of XMLRPC. Download the tool at the following link: hxxp://wordpress.org/plugins/disable-xml-rpc-pingback/.</p>
+<li><p>At the time of this writing, there is no way to prevent this inbound traffic as on its own it is normal web traffic. However, there is a way to ensure that your WordPress websites are not used to attack others. To do this, WordPress offers a tool that is available for download that disables the pingback feature of XMLRPC. Download the tool at using this <a class="reference external" href="http://wordpress.org/plugins/disable-xml-rpc-pingback/">link</a></p>
 <ul>
-<li><p>Alternatively, you can create a plugin for the website that adds a filter that manually disables the pingback function of XMLRPC. An example of this plugin can be found at: hxxps://isc.sans.edu/forums/diary/Wordpress+Pingback+DDoS+Attacks/17801</p></li>
+<li><p>Alternatively, you can create a plugin for the website that adds a filter that manually disables the pingback function of XMLRPC. An example of this plugin can be found <a class="reference external" href="https://isc.sans.edu/forums/diary/Wordpress+Pingback+DDoS+Attacks/17801">here</a></p></li>
 </ul>
 </li>
 </ul>

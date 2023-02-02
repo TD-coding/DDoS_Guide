@@ -14,7 +14,7 @@ Recommendations
 
   * If you are using a tool that displays the network protocols as numbered values, ICMP is protocol 1.
 
-  * There are also ICMP type and code fields that identify what ICMP traffic is being sent or received. For a complete list of these types and codes, please see http://www.nthelp.com/icmp.html
+  * There are also ICMP type and code fields that identify what ICMP traffic is being sent or received. For a complete list of these types and codes, please clikc `here <http://www.nthelp.com/icmp.html>`_
 
 * If you identify an attack, try to leverage your upstream network service provider in order for them to mitigate the activity before it reaches your network.
 

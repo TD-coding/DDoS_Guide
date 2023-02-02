@@ -13,6 +13,6 @@ Recommendations
 
 * Along with remediating inbound attacks, disable DNS recursion, if possible, by following the guidelines provided by your DNS server vendor (BIND, Microsoft, etc.). In doing so, this ensures that your DNS servers are not used to attack others.
 
-  * Instructions for disabling recursion can also be found at `Team Cymru <http://www.team-cymru.org/Services/Resolvers/instructions.html>.`
+  * Instructions for disabling recursion can also be found at `Team Cymru <http://www.team-cymru.org/Services/Resolvers/instructions.html>`_
 
   * To discover if any of your public DNS servers may be used to attack others, use the free test at openresolverproject.org. 

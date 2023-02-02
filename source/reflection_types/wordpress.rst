@@ -10,6 +10,6 @@ Recommendations
 
 * If you identify an attack, try to leverage your upstream network service provider in order for them to mitigate the activity before it reaches your network.
 
-* At the time of this writing, there is no way to prevent this inbound traffic as on its own it is normal web traffic. However, there is a way to ensure that your WordPress websites are not used to attack others. To do this, WordPress offers a tool that is available for download that disables the pingback feature of XMLRPC. Download the tool at the following link: hxxp://wordpress.org/plugins/disable-xml-rpc-pingback/.
+* At the time of this writing, there is no way to prevent this inbound traffic as on its own it is normal web traffic. However, there is a way to ensure that your WordPress websites are not used to attack others. To do this, WordPress offers a tool that is available for download that disables the pingback feature of XMLRPC. Download the tool at using this `link <http://wordpress.org/plugins/disable-xml-rpc-pingback/>`_
 
-  * Alternatively, you can create a plugin for the website that adds a filter that manually disables the pingback function of XMLRPC. An example of this plugin can be found at: hxxps://isc.sans.edu/forums/diary/Wordpress+Pingback+DDoS+Attacks/17801
+  * Alternatively, you can create a plugin for the website that adds a filter that manually disables the pingback function of XMLRPC. An example of this plugin can be found `here <https://isc.sans.edu/forums/diary/Wordpress+Pingback+DDoS+Attacks/17801>`_  
